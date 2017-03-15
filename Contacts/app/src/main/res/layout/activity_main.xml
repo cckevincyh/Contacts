@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/layoutContainer"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:padding="8dp" >
+
+        <!--顶部搜索栏-->
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/text_field"
+            android:drawableLeft="@drawable/search"
+            android:drawablePadding="4dp"
+            android:hint="搜索"
+            android:paddingLeft="4dp"
+            android:paddingRight="40dp"
+            android:singleLine="true"
+            android:textSize="14sp" />
+
+        <!--关闭搜索按钮-->
+        <ImageView
+            android:id="@+id/ivClearText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:padding="4dp"
+            android:src="@drawable/clear_button"
+             />
+    </FrameLayout>
+
+
+
+    <ListView
+        android:id="@+id/contacts_list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:fadingEdge="none"
+        android:divider="#c0c0c0"
+        android:dividerHeight="1px"
+        android:paddingLeft="15dip"
+        android:paddingRight="25dip"
+        android:scrollbars="none">
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="18dip"
+        android:layout_alignParentTop="true"
+        android:background="#303030" >
+
+        <!--顶部字母-->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dip"
+
+            android:textSize="13sp"
+            android:text="字母"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/dialog"
+        android:layout_width="80.0dip"
+        android:layout_height="80.0dip"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:background="@drawable/voip_toast_bg"
+        android:gravity="center"
+        android:textColor="#ffffffff"
+        android:textSize="30.0dip"
+        android:visibility="invisible" />
+
+    <com.silent.handle.SideBar
+        android:id="@+id/sidrbar"
+        android:layout_width="30.0dip"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right|center" />
+
+
+
+</LinearLayout>
