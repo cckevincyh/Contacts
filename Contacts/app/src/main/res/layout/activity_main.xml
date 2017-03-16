@@ -36,7 +36,9 @@
              />
     </FrameLayout>
 
-
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <ListView
         android:id="@+id/contacts_list_view"
@@ -51,12 +53,13 @@
         android:scrollbars="none">
     </ListView>
 
+    <!--顶部字母布局-->
     <LinearLayout
         android:id="@+id/title_layout"
         android:layout_width="fill_parent"
-        android:layout_height="18dip"
+        android:layout_height="20dip"
         android:layout_alignParentTop="true"
-        android:background="#303030" >
+        android:background="#f1f1ee" >
 
         <!--顶部字母-->
         <TextView
@@ -66,7 +69,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginLeft="10dip"
 
-            android:textSize="13sp"
+            android:textSize="15sp"
             android:text="字母"/>
 
     </LinearLayout>
@@ -83,13 +86,13 @@
         android:textSize="30.0dip"
         android:visibility="invisible" />
 
-    <com.silent.handle.SideBar
+    <com.contacts.main.SideBar
         android:id="@+id/sidrbar"
         android:layout_width="30.0dip"
         android:layout_height="fill_parent"
         android:layout_alignParentRight="true"
         android:layout_gravity="right|center" />
 
-
+</RelativeLayout>
 
 </LinearLayout>
