@@ -5,18 +5,23 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.util.Log;
+
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
+
 import android.widget.AlphabetIndexer;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
+
 import com.contacts.adapter.ContactAdapter;
 import com.contacts.domain.Contacts;
-
+import com.contacts.main.SideBar.OnTouchingLetterChangedListener;
 import java.util.ArrayList;
+
 import java.util.List;
 
 public class MainActivity extends Activity {
@@ -61,6 +66,19 @@ public class MainActivity extends Activity {
      */
     private int lastFirstVisibleItem = -1;
 
+
+    /**
+     * 侧边滑动栏
+     */
+    private SideBar	sideBar;
+
+    /**
+     * 弹出的字母
+     */
+    private TextView dialog;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,6 +87,7 @@ public class MainActivity extends Activity {
         titleLayout = (LinearLayout) findViewById(R.id.title_layout);
         title = (TextView) findViewById(R.id.title);
         contactsListView = (ListView) findViewById(R.id.contacts_list_view);
+        initBar();//侧边字母栏
         Uri uri = ContactsContract.CommonDataKinds.Phone.CONTENT_URI;//查询手机里所有的联系人
 
 
@@ -145,6 +164,9 @@ public class MainActivity extends Activity {
 
     }
 
+
+
+
     /**
      * 获取sort key的首个字符，如果是英文字母就直接返回，否则返回#。
      *
@@ -159,4 +181,33 @@ public class MainActivity extends Activity {
         }
         return "#";
     }
+
+
+    private void initBar() {
+
+        sideBar = (SideBar) findViewById(R.id.sidrbar);
+        dialog = (TextView) findViewById(R.id.dialog);
+        sideBar.setTextView(dialog);
+
+        // 设置右侧触摸监听
+        sideBar.setOnTouchingLetterChangedListener(new OnTouchingLetterChangedListener() {
+
+            @Override
+            public void onTouchingLetterChanged(String s) {
+
+
+                int position = alphabet.indexOf(s);//s为侧边栏点击中的字母，得出s在整个字母位子中的索引
+
+                contactsListView.setSelection(position);//设置ListView的位置
+
+            }
+        });
+
+
+    }
+
+
+
+
+
 }
