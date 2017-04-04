@@ -46,4 +46,13 @@ public class Contacts {
     public void setSortKey(String sortKey) {
         this.sortKey = sortKey;
     }
+
+    @Override
+    public String toString() {
+        return "Contacts{" +
+                "name='" + name + '\'' +
+                ", phone='" + phone + '\'' +
+                ", sortKey='" + sortKey + '\'' +
+                '}';
+    }
 }

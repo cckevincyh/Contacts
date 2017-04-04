@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">Contacts</string>
+    <string name="app_name">通讯录</string>
+    <string name="add">添加联系人</string>
+    <string name="group">查看分组</string>
+    <string name="title_activity_add_contacts">添加联系人</string>
+    <drawable name="item_normal">#ffffff</drawable>
+    <drawable name="item_pressed">#c9c7c7</drawable>
+
 </resources>

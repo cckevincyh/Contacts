@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.contacts.main.MainActivity">
+
+    <item
+        android:id="@+id/add"
+        android:orderInCategory="1"
+        android:title="@string/add"
+         />
+
+    <item
+        android:id="@+id/group"
+        android:orderInCategory="2"
+        android:title="@string/group"
+        />
+
+</menu>

@@ -24,7 +24,7 @@ public class SideBar extends View {
     private OnTouchingLetterChangedListener	onTouchingLetterChangedListener;
     // 26个字母
     public static String[] b = { "#","A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
-    private int								choose	= -1;																																			// 选中
+    private int	choose	= -1;																																			// 选中
     private Paint paint	= new Paint();
 
     private TextView mTextDialog;
@@ -59,7 +59,7 @@ public class SideBar extends View {
             paint.setColor(Color.GRAY);
             paint.setTypeface(Typeface.DEFAULT);
             paint.setAntiAlias(true);
-            paint.setTextSize(16);
+            paint.setTextSize(35);
             // 选中的状态
             if(i == choose) {
                 paint.setColor(Color.parseColor("#ffffff"));
