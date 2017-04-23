@@ -65,7 +65,6 @@ public class AddContactsActivity extends AppCompatActivity {
             values.put("mimetype", "vnd.android.cursor.item/name");
             values.put("raw_contact_id", contact_id);
             cr.insert(Uri.parse("content://com.android.contacts/data"), values);
-
             //插入电话
             values.clear();
             values.put("data1", phone.trim());

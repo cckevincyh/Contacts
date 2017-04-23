@@ -10,7 +10,6 @@
         android:id="@+id/sort_key_layout"
         android:layout_width="fill_parent"
         android:layout_height="18dip"
-        android:background="#f1f1ee"
        >
 
         <TextView

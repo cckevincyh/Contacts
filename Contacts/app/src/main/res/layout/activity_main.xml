@@ -5,6 +5,38 @@
     android:background="@android:color/white"
     android:orientation="vertical" >
 
+
+    <FrameLayout
+        android:id="@+id/layoutContainer"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:padding="8dp" >
+
+        <!--顶部搜索栏-->
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/text_field"
+            android:drawableLeft="@drawable/search"
+            android:drawablePadding="4dp"
+            android:hint="搜索"
+            android:paddingLeft="4dp"
+            android:paddingRight="40dp"
+            android:singleLine="true"
+            android:textSize="14sp" />
+
+        <!--关闭搜索按钮-->
+        <ImageView
+            android:id="@+id/ivClearText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:padding="4dp"
+            android:src="@drawable/clear_button"
+            />
+    </FrameLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -43,35 +75,6 @@
 
     </RelativeLayout>
 
-    <FrameLayout
-        android:id="@+id/layoutContainer"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:padding="8dp" >
 
-        <!--顶部搜索栏-->
-        <EditText
-            android:id="@+id/et_search"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/text_field"
-            android:drawableLeft="@drawable/search"
-            android:drawablePadding="4dp"
-            android:hint="搜索"
-            android:paddingLeft="4dp"
-            android:paddingRight="40dp"
-            android:singleLine="true"
-            android:textSize="14sp" />
-
-        <!--关闭搜索按钮-->
-        <ImageView
-            android:id="@+id/ivClearText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right|center_vertical"
-            android:padding="4dp"
-            android:src="@drawable/clear_button"
-             />
-    </FrameLayout>
 
 </LinearLayout>

@@ -2,6 +2,7 @@ package com.contacts.main;
 
 import android.app.Activity;
 import android.content.ContentResolver;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -202,6 +203,14 @@ public class MainActivity extends Activity {
             case 1:
 
                 Toast.makeText(this, "修改",Toast.LENGTH_SHORT).show();
+
+
+                //携带数据跳转到修改联系人界面
+                Intent intent = new Intent(this,UpdateContactsActivity.class);
+                intent.putExtra("name", contact.getName());
+                intent.putExtra("phone",contact.getPhone());
+                startActivity(intent);
+
                 break;
             case 2:
                 Toast.makeText(this, "删除", Toast.LENGTH_SHORT).show();
@@ -384,8 +393,6 @@ public class MainActivity extends Activity {
             resolver.delete(uri, "raw_contact_id=?", new String[]{id+""});
         }
     }
-
-
 
 
 
