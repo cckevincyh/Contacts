@@ -5,6 +5,44 @@
     android:background="@android:color/white"
     android:orientation="vertical" >
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/contacts_list_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:fadingEdge="none"
+            android:divider="#c0c0c0"
+            android:dividerHeight="1px"
+            android:paddingLeft="15dip"
+            android:paddingRight="25dip"
+            android:scrollbars="none">
+        </ListView>
+
+        <TextView
+            android:id="@+id/dialog"
+            android:layout_width="80.0dip"
+            android:layout_height="80.0dip"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:background="@drawable/voip_toast_bg"
+            android:gravity="center"
+            android:textColor="#ffffffff"
+            android:textSize="30.0dip"
+            android:visibility="invisible" />
+
+        <com.contacts.main.SideBar
+            android:id="@+id/sidrbar"
+            android:layout_width="30.0dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right|center" />
+
+    </RelativeLayout>
+
     <FrameLayout
         android:id="@+id/layoutContainer"
         android:layout_width="match_parent"
@@ -35,64 +73,5 @@
             android:src="@drawable/clear_button"
              />
     </FrameLayout>
-
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <ListView
-        android:id="@+id/contacts_list_view"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_alignParentTop="true"
-        android:fadingEdge="none"
-        android:divider="#c0c0c0"
-        android:dividerHeight="1px"
-        android:paddingLeft="15dip"
-        android:paddingRight="25dip"
-        android:scrollbars="none">
-    </ListView>
-
-    <!--顶部字母布局-->
-    <LinearLayout
-        android:id="@+id/title_layout"
-        android:layout_width="fill_parent"
-        android:layout_height="20dip"
-        android:layout_alignParentTop="true"
-        android:background="#f1f1ee" >
-
-        <!--顶部字母-->
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="10dip"
-
-            android:textSize="15sp"
-            android:text="字母"/>
-
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/dialog"
-        android:layout_width="80.0dip"
-        android:layout_height="80.0dip"
-        android:layout_centerInParent="true"
-        android:layout_gravity="center"
-        android:background="@drawable/voip_toast_bg"
-        android:gravity="center"
-        android:textColor="#ffffffff"
-        android:textSize="30.0dip"
-        android:visibility="invisible" />
-
-    <com.contacts.main.SideBar
-        android:id="@+id/sidrbar"
-        android:layout_width="30.0dip"
-        android:layout_height="fill_parent"
-        android:layout_alignParentRight="true"
-        android:layout_gravity="right|center" />
-
-</RelativeLayout>
 
 </LinearLayout>
